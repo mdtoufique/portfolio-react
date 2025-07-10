@@ -1,3 +1,7 @@
+
+
+// import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 // export default function Navbar() {
 //   const links = [
 //     { href: '#home', label: 'Home', icon: 'fa-home' },
@@ -9,12 +13,13 @@
 
 //   return (
 //     <nav
-//       className="fixed top-0 left-0 right-0 h-16 bg-[var(--dim-white)] shadow-md flex items-center px-6 z-50"
+//       className="fixed top-0 left-0 right-0 h-16 bg-[var(--dim-white)] shadow-md flex items-center justify-between px-6 z-50"
 //       style={{ color: 'var(--black)' }}
 //     >
-//       <div className="text-2xl font-bold mr-12" style={{ color: 'var(--orange)' }}>
+//       <div className="text-2xl font-bold" style={{ color: 'var(--orange)' }}>
 //         <span style={{ color: 'var(--orange)' }}>T</span>oufique
 //       </div>
+
 //       <ul className="flex space-x-6">
 //         {links.map(({ href, label, icon }) => (
 //           <li key={href}>
@@ -28,10 +33,28 @@
 //           </li>
 //         ))}
 //       </ul>
+
+//       <div className="flex items-center space-x-4">
+//         <a
+//           href="https://www.linkedin.com/in/md-rehman-toufique-ifti-3a1133284"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           className="text-[var(--black)] hover:text-[var(--orange)] text-xl"
+//         >
+//           <FaLinkedin />
+//         </a>
+//         <a
+//           href="https://github.com/mdtoufique"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           className="text-[var(--black)] hover:text-[var(--orange)] text-xl"
+//         >
+//           <FaGithub />
+//         </a>
+//       </div>
 //     </nav>
 //   );
 // }
-
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -49,11 +72,13 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 h-16 bg-[var(--dim-white)] shadow-md flex items-center justify-between px-6 z-50"
       style={{ color: 'var(--black)' }}
     >
+      {/* Logo */}
       <div className="text-2xl font-bold" style={{ color: 'var(--orange)' }}>
         <span style={{ color: 'var(--orange)' }}>T</span>oufique
       </div>
 
-      <ul className="flex space-x-6">
+      {/* Nav Links - Hidden on mobile */}
+      <ul className="hidden md:flex space-x-6">
         {links.map(({ href, label, icon }) => (
           <li key={href}>
             <a
@@ -67,6 +92,7 @@ export default function Navbar() {
         ))}
       </ul>
 
+      {/* Social Icons - Always visible */}
       <div className="flex items-center space-x-4">
         <a
           href="https://www.linkedin.com/in/md-rehman-toufique-ifti-3a1133284"
@@ -88,3 +114,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
