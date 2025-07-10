@@ -7,7 +7,7 @@ import Services from './pages/Services.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Contact from './pages/Contact.jsx';
 import { Toaster } from 'react-hot-toast';
-import { Analytics } from "@vercel/analytics"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 
