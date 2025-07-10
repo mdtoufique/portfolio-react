@@ -63,7 +63,7 @@ export default function Navbar() {
     { href: '#home', label: 'Home', icon: 'fa-home' },
     { href: '#about', label: 'About', icon: 'fa-user' },
     { href: '#services', label: 'Services', icon: 'fa-list' },
-    { href: '#portfolio', label: 'Portfolio', icon: 'fa-briefcase' },
+    { href: '#portfolio', label: 'Projects', icon: 'fa-briefcase' },
     { href: '#contact', label: 'Contact', icon: 'fa-comments' },
   ];
 
