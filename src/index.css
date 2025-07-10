@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --orange: #ed5b2d;
+  --dim-white: #f6f6e9;
+  --black: #000000;
+  --background-color: var(--dim-white);
+  --text-color: var(--black);
+  --accent-color: var(--orange);
+}
