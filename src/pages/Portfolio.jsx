@@ -43,7 +43,7 @@ export default function Portfolio() {
       className="min-h-screen px-4 sm:px-6 lg:px-8 py-16"
       style={{ backgroundColor: "var(--dim-white)", color: "var(--black)" }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2
           className="text-2xl md:text-3xl font-bold text-center mb-6 text-[var(--orange)] border-b border-[var(--orange)] pb-2"
         >

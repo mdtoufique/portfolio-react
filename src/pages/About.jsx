@@ -59,6 +59,34 @@ export default function About() {
     
   ];
 
+  const skills = [
+  {
+    category: "Programming Languages",
+    items: ["C", "C++", "Python", "JavaScript", "PHP"],
+  },
+  {
+    category: "Frameworks & Libraries",
+    items: ["Node.js", "Express.js", "React.js", "Socket.IO"],
+  },
+  {
+    category: "Database",
+    items: ["MySQL", "MongoDB"],
+  },
+  {
+    category: "Machine Learning & Data Analysis",
+    items: ["Scikit-learn", "Pandas", "NumPy", "Matplotlib", "NLTK"],
+  },
+  {
+    category: "Web Technologies",
+    items: ["HTML", "CSS"],
+  },
+  {
+    category: "Tools & Platforms",
+    items: ["Git", "GitHub", "Linux (Ubuntu)", "Windows"],
+  },
+];
+
+
   return (
     <section
       id="about"
@@ -91,7 +119,7 @@ export default function About() {
 
         
         {/* Technical Skills Section */}
-        <section className="mb-10 p-8 bg-white rounded-xl shadow-md border border-[rgba(237,91,45,0.2)]">
+        {/* <section className="mb-10 p-8 bg-white rounded-xl shadow-md border border-[rgba(237,91,45,0.2)]">
           <h2
           className="text-2xl md:text-3xl font-bold text-center mb-6 text-[var(--orange)] border-b border-[var(--orange)] pb-2"
         >
@@ -110,6 +138,49 @@ export default function About() {
                     className="w-8 h-8 mr-3 object-contain"
                   />
                   <span className="text-black text-sm font-medium group-hover:text-[#ed5b2d]">
+                    {tech.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section> */}
+        <section className="mb-10 p-8 bg-white rounded-xl shadow-md border border-[rgba(237,91,45,0.2)]">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-[var(--orange)] border-b border-[var(--orange)] pb-2">
+            Technical Skills
+          </h2>
+          <div className="mt-6 grid md:grid-cols-2 gap-6">
+            <div className="space-y-6 text-black text-sm font-medium">
+              {skills.map((section, index) => (
+                <div key={index}>
+                  <h3 className="text-base font-semibold text-zinc-700 mb-2">
+                    {section.category}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {section.items.map((item, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-gray-200 rounded-md"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 place-items-center">
+              {technologies.map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center bg-white/70 backdrop-blur-sm rounded-lg p-3 shadow hover:shadow-md border border-[#ed5b2d]/30 hover:border-[#ed5b2d] transition duration-200 group"
+                >
+                  <img
+                    src={tech.logo}
+                    alt={tech.name}
+                    className="w-16 h-10 object-contain mb-2 aspect-square"
+                  />
+                  <span className="text-black text-xs font-medium group-hover:text-[#ed5b2d] text-center">
                     {tech.name}
                   </span>
                 </div>

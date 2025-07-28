@@ -27,7 +27,7 @@ const Footer = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-        className="bg-gradient-to-r from-[#7c2d12] via-[#f97316] to-[#fbbf24] text-black py-4 px-6 text-center rounded-t-xl shadow-lg relative overflow-hidden"
+        className="bg-gradient-to-r from-[#3b82f6] via-[#3b82f6] to-[#93c5fd] text-black py-4 px-6 text-center rounded-t-xl shadow-lg relative overflow-hidden"
       >
         {/* Animated top border */}
         <div className="absolute inset-0 border-t border-[#f97316] animate-pulse pointer-events-none"></div>
