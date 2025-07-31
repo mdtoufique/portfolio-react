@@ -5,8 +5,24 @@ const projects = [
     title: "Multi-Vendor E-Commerce Platform",
     description:
       "Built a full-stack multi-vendor e-commerce site with role-based dashboards and secure JWT auth. Integrated real-time chat using Socket.IO and implemented admin approval for sellers. Applied CORS, rate limiting, and bcrypt for API security and data protection.",
-    techStack: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Socket.IO"],
+    techStack: [ "React", "Node.js", "Express.js","MongoDB", "JWT", "Socket.IO"],
     link: "https://github.com/mdtoufique/multi-vendor-ecommerce-website",
+    image: null,
+  },
+  {
+    title: "Full Stack Todo App",
+    description:
+      "Created a user-specific task manager with JWT authentication and protected API routes. Implemented full CRUD for tasks with real-time UI updates and a spin-to-pick task feature.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    link: "https://github.com/mdtoufique/TODO",
+    image: null,
+  },
+   {
+    title: "Courier Package Tracker",
+    description:
+      "Built a full-stack courier package tracking system with real-time dashboard, stuck-package alerting, and secure API endpoints. Backend handles courier updates, event history, alert cron jobs, and security. Frontend provides live package views, filtering, search, and alert indicators using polling.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT","node-cron"],
+    link: "https://github.com/mdtoufique/Package-Tracker-Client",
     image: null,
   },
   {
