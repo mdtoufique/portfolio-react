@@ -115,7 +115,7 @@ export default function Contact() {
 					<div className="md:col-span-2 flex justify-center">
 						<button
 							type="submit"
-							className="px-6 py-3 bg-[var(--orange)] text-white rounded-md font-medium hover:bg-[#ff0000e1] transition"
+							className="px-6 py-3 bg-[var(--orange)] text-white rounded-md font-medium hover:bg-[rgba(21,24,70,0.88)] transition"
 						>
 							Send Message
 						</button>

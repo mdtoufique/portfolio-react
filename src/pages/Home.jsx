@@ -59,7 +59,7 @@ export default function Home() {
 							color: "var(--dim-white)",
 						}}
 						onMouseEnter={(e) =>
-							(e.currentTarget.style.backgroundColor = "#ff0000e1")
+							(e.currentTarget.style.backgroundColor = "rgba(21, 24, 70, 0.88)")
 						}
 						onMouseLeave={(e) =>
 							(e.currentTarget.style.backgroundColor =
