@@ -37,7 +37,7 @@ export default function Contact() {
 		>
 			<div className="max-w-6xl mx-auto">
 				{/* Info Cards */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center mb-18">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center mb-18">
 					{[
 						{
 							icon: <FaPhoneAlt />,
@@ -53,11 +53,6 @@ export default function Contact() {
 							icon: <FaEnvelope />,
 							label: "Email",
 							value: "mdrehmant@gmail.com",
-						},
-						{
-							icon: <FaGlobe />,
-							label: "Website",
-							value: "www.domain.com",
 						},
 					].map(({ icon, label, value }, i) => (
 						<div
