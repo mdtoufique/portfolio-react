@@ -3,7 +3,8 @@ import { FaLinkedin, FaGithub, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const mobileMenuRef = useRef(null);
+  const menuRef = useRef(null);
+  const toggleRef = useRef(null);
 
   const links = [
     { href: '#home', label: 'Home', icon: 'fa-home' },
@@ -13,15 +14,20 @@ export default function Navbar() {
     { href: '#contact', label: 'Contact', icon: 'fa-comments' },
   ];
 
-  // Close mobile nav on outside click
+  // Close on outside click or touch
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+    const handlePointerDown = (event) => {
+      if (
+        isOpen &&
+        !menuRef.current?.contains(event.target) &&
+        !toggleRef.current?.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
   }, [isOpen]);
 
   return (
@@ -51,16 +57,17 @@ export default function Navbar() {
 
       {/* Toggle Button for Mobile */}
       <button
-        className="md:hidden text-xl text-[var(--black)] focus:outline-none"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <FaTimes /> : <FaBars />}
-      </button>
+          ref={toggleRef}
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-2xl text-[ #332dedff]"
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div
-          ref={mobileMenuRef}
+          ref={menuRef} 
           className="absolute top-16 left-0 right-0 bg-[var(--dim-white)] shadow-md px-4 py-4 z-50 md:hidden"
         >
           <ul className="flex flex-col space-y-3 text-sm">
